@@ -9,13 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Image("GreenBackground")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                Spacer()
+                Image("DiceeLogo")
+                Spacer()
+                HStack {
+                    Image("DiceOne")
+                    Image("DiceOne")
+                }
+                Spacer()
+                Spacer()
+            }
         }
-        .padding()
     }
 }
 
